@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+.header__campuses {
+    position: relative;
+}
+.header__dropdown {
+    position: absolute;
+    background-color: rgb(254, 254, 254);
+    box-shadow: rgba(7, 7, 7, 0.17) 0px 1px 4px;
+    border-radius: 3px;
+    width: 200px;
+    top: 48px;
+    left: calc(50% - 112px);
+    box-sizing: border-box;
+}
+.header__dropdown-item {
+
+}
