@@ -17,17 +17,50 @@
 .header__campuses {
     position: relative;
 }
-.header__dropdown {
+.header__campuses:hover .header__dropdown-body {
+    display: flex;
+}
+.header__dropdown-title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 25px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    cursor: pointer;
+}
+.header__dropdown-title p {
+    font-family: 'HSESansRegular';
+    display: inline-block;
+    line-height: 1.5;
+    color: rgba(23,24,26,0.8);
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0;
+    transition: 0.2s;
+}
+.header__dropdown-title:hover p {
+    color: grey;
+}
+.header__dropdown-title svg {
+    fill: none;
+    stroke: rgba(23,24,26,0.8);
+    transition: 0.2s;
+    /* TODO: Safari not transitioning at all */
+}
+.header__dropdown-title:hover svg {
+    stroke: grey;
+}
+.header__dropdown-body {
     position: absolute;
     background-color: rgb(254, 254, 254);
     box-shadow: rgba(7, 7, 7, 0.17) 0px 1px 4px;
     border-radius: 3px;
     width: 200px;
-    top: 48px;
     left: calc(50% - 112px);
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
+    display: none;
 }
 .header__dropdown-item {
     background-color: rgb(242, 242, 242);
