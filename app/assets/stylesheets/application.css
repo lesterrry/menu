@@ -14,10 +14,10 @@
  *= require_self
  */
 
-.header__campuses {
+.header__dropdown {
     position: relative;
 }
-.header__campuses:hover .header__dropdown-body {
+.header__dropdown:hover .header__dropdown-body {
     display: flex;
 }
 .header__dropdown-title {
