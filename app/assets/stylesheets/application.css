@@ -26,7 +26,23 @@
     top: 48px;
     left: calc(50% - 112px);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 .header__dropdown-item {
-
+    background-color: rgb(242, 242, 242);
+    min-height: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
+}
+.header__dropdown-item:hover {
+    background-color: rgb(231, 231, 231);
+}
+.header__dropdown-item p {
+    font-weight: normal;
+    word-wrap: break-word;
+    margin: 0;
 }
