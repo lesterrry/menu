@@ -14,20 +14,17 @@
  *= require_self
  */
 
-.display_flex {
-    display: flex !important;
-}
 .header__dropdown {
     position: relative;
     z-index: 999;
 }
-.header__dropdown:hover .header__dropdown-body {
+.header__dropdown:hover .header__dropdown-body, .display-flex .header__dropdown-body {
     display: flex;
 }
-.header__dropdown:hover .header__dropdown-title p {
+.header__dropdown:hover .header__dropdown-title p, .display-flex .header__dropdown-title p {
     color: grey;
 }
-.header__dropdown:hover .header__dropdown-title svg {
+.header__dropdown:hover .header__dropdown-title svg, .display-flex .header__dropdown-title svg {
     stroke: grey;
 }
 .header__dropdown-title {
