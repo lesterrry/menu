@@ -16,9 +16,16 @@
 
 .header__dropdown {
     position: relative;
+    z-index: 999;
 }
 .header__dropdown:hover .header__dropdown-body {
     display: flex;
+}
+.header__dropdown:hover .header__dropdown-title p {
+    color: grey;
+}
+.header__dropdown:hover .header__dropdown-title svg {
+    stroke: grey;
 }
 .header__dropdown-title {
     padding-top: 12px;
@@ -39,17 +46,11 @@
     margin: 0;
     transition: 0.2s;
 }
-.header__dropdown-title:hover p {
-    color: grey;
-}
 .header__dropdown-title svg {
     fill: none;
     stroke: rgba(23,24,26,0.8);
     transition: 0.2s;
     /* TODO: Safari not transitioning at all */
-}
-.header__dropdown-title:hover svg {
-    stroke: grey;
 }
 .header__dropdown-body {
     position: absolute;
