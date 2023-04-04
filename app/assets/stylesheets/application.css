@@ -18,13 +18,13 @@
     position: relative;
     z-index: 999;
 }
-.header__dropdown:hover .header__dropdown-body, .display-flex .header__dropdown-body {
+.active .header__dropdown-body {
     display: flex;
 }
-.header__dropdown:hover .header__dropdown-title p, .display-flex .header__dropdown-title p {
+.active .header__dropdown-title p {
     color: grey;
 }
-.header__dropdown:hover .header__dropdown-title svg, .display-flex .header__dropdown-title svg {
+.active .header__dropdown-title svg {
     stroke: grey;
 }
 .header__dropdown-title {

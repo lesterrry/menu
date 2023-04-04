@@ -14,19 +14,35 @@ class Dropdown {
 
 let dropdowns = []
 
-document.addEventListener('DOMContentLoaded', (_event) => {
+const populateDropdowns = () => {
 	let dropdown_instances = document.querySelectorAll('.header__dropdown')
 	for (let i = dropdown_instances.length - 1; i >= 0; i--) {
-		dropdowns.push(new Dropdown(dropdown_instances[i]))
-		dropdowns[i].instance.addEventListener('click', () => {
-			if (!mobile) return
-			if (dropdowns[i].isShown) {
-				dropdowns[i].instance.classList.remove('display-flex')
-				dropdowns[i].isShown = false
-			} else {
-				dropdowns[i].instance.classList.add('display-flex')
+		dropdowns[i] = new Dropdown(dropdown_instances[i])
+		if (mobile) {
+			dropdowns[i].instance.addEventListener('click', () => {
+				if (dropdowns[i].isShown) {
+					dropdowns[i].instance.classList.remove('active')
+					dropdowns[i].isShown = false
+				} else {
+					dropdowns[i].instance.classList.add('active')
+					dropdowns[i].isShown = true
+				}
+			})
+		} else {
+			dropdowns[i].instance.addEventListener('mouseover', () => {
+				dropdowns[i].instance.classList.add('active')
 				dropdowns[i].isShown = true
-			}
-		})
+			})
+			dropdowns[i].instance.addEventListener('mouseout', () => {
+				dropdowns[i].instance.classList.remove('active')
+				dropdowns[i].isShown = false
+			})
+		}
 	}
-})
+}
+
+if (document.readyState !== 'loading') {
+	populateDropdowns()
+} else {
+	document.addEventListener('DOMContentLoaded', () => { populateDropdowns() })
+}
