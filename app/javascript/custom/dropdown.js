@@ -14,7 +14,7 @@ class Dropdown {
 
 let dropdowns = []
 
-document.addEventListener('DOMContentLoaded', (_event) => { 
+document.addEventListener('DOMContentLoaded', (_event) => {
 	let dropdown_instances = document.querySelectorAll('.header__dropdown')
 	for (let i = dropdown_instances.length - 1; i >= 0; i--) {
 		dropdowns.push(new Dropdown(dropdown_instances[i]))

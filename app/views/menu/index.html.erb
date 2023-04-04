@@ -25,13 +25,12 @@
 <div class='header__top-right'>
 <%=
 	dropdown = {
-		:title => 'Кампусы',
-		:link => nil,
-		:items => [ 
-			{ :title => 'Кампус в Москве', :link => 'https://design.hse.ru/' },
-			{ :title => 'Кампус в Санкт-Петербурге', :link => 'https://design.hse.ru/dir/spbdesign' },
-			{ :title => 'Кампус в Нижнем Новгороде', :link => 'https://design.hse.ru/dir/nndesign' },
-			{ :title => 'Онлайн-бакалавриат', :link => 'https://design.hse.ru/online/ba' },
+		title: 'Кампусы',
+		items: [ 
+			{ title: 'Кампус в Москве', link: 'https://design.hse.ru/' },
+			{ title: 'Кампус в Санкт-Петербурге', link: 'https://design.hse.ru/dir/spbdesign' },
+			{ title: 'Кампус в Нижнем Новгороде', link: 'https://design.hse.ru/dir/nndesign' },
+			{ title: 'Онлайн-бакалавриат', link: 'https://design.hse.ru/online/ba' },
 		]
 	}
 	render partial: 'dropdown', object: dropdown
