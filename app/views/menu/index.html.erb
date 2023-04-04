@@ -23,28 +23,18 @@
 <div class='header__top-arr'></div>
 </div>
 <div class='header__top-right'>
-<div class='header__campuses'>
-	<a href="https://design.hse.ru/info/campuses" class="header__dropdown-title">
-		<p>Кампусы</p>
-		<svg width="14" height="8" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg">
-		<path d="M0.97934 1.36652L8.00001 8.38718L15.0207 1.36652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-		</svg>
-	</a>
-	<div class="header__dropdown-body">
-		<a href="#" class="header__dropdown-item">
-			<p>Первый</p>
-		</a>
-		<a href="#" class="header__dropdown-item">
-			<p>Второй</p>
-		</a>
-		<a href="#" class="header__dropdown-item">
-			<p>Третий</p>
-		</a>
-		<a href="#" class="header__dropdown-item">
-			<p>Четвертый</p>
-		</a>
-	</div>
-</div>
+<%=
+	dropdown = {
+		:title => 'Кампусы',
+		:items => [ 
+			{ :title => 'Кампус в Москве', :link => 'https://design.hse.ru/' },
+			{ :title => 'Кампус в Санкт-Петербурге', :link => 'https://design.hse.ru/dir/spbdesign' },
+			{ :title => 'Кампус в Нижнем Новгороде', :link => 'https://design.hse.ru/dir/nndesign' },
+			{ :title => 'Онлайн-бакалавриат', :link => 'https://design.hse.ru/online/ba' },
+		]
+	}
+	render partial: 'dropdown', object: dropdown
+%>
 <a class='header__openday' href='https://design.hse.ru/info/openday'>Дни открытых дверей</a>
 <a class='header__tel-btn' href='https://design.hse.ru/questions-about-admission'></a>
 <a class='header__tel-btn-long' href='https://design.hse.ru/join'>

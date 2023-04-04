@@ -1,0 +1,15 @@
+<div class='header__dropdown'>
+	<a href="https://design.hse.ru/info/campuses" class="header__dropdown-title">
+		<p><%= dropdown[:title] %></p>
+		<svg width="14" height="8" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg">
+		<path d="M0.97934 1.36652L8.00001 8.38718L15.0207 1.36652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</a>
+	<div class="header__dropdown-body">
+		<% dropdown[:items].each do |item| %>
+		<a href=<%= item[:link] %> class="header__dropdown-item">
+			<p><%= item[:title] %></p>
+		</a>
+		<% end %>
+	</div>
+</div>
